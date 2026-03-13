@@ -41,6 +41,16 @@ const initialLocations: LocationMarker[] = [
   { id: '4', name: 'Truck 402', type: 'Delivery Truck', lat: 41.8781, lng: -87.6298, status: 'Green', riskLevel: 'Low', shipmentId: 'SHP-1044', eta: '2 Hours', origin: 'Chicago, USA', destination: 'Detroit, USA', timelineStatus: 'In Transit' },
   { id: '5', name: 'Shanghai Port Hub', type: 'Distribution Center', lat: 31.2304, lng: 121.4737, status: 'Green', riskLevel: 'Low', origin: 'Shanghai, CN', destination: 'Tokyo, JP', timelineStatus: 'Dispatched' },
   { id: '6', name: 'Mumbai Tech Factory', type: 'Factory', lat: 19.0760, lng: 72.8777, status: 'Yellow', riskLevel: 'Medium', origin: 'Mumbai, IN', destination: 'Dubai, UAE', timelineStatus: 'Packed' },
+  { id: '11', name: 'Delhi Logistics Hub', type: 'Distribution Center', lat: 28.6139, lng: 77.2090, status: 'Green', riskLevel: 'Low', origin: 'Delhi, IN', destination: 'Singapore, SG', timelineStatus: 'Dispatched' },
+  { id: '12', name: 'Bangalore Tech Park', type: 'Warehouse', lat: 12.9716, lng: 77.5946, status: 'Green', riskLevel: 'Low', origin: 'Bangalore, IN', destination: 'San Francisco, USA', timelineStatus: 'In Transit' },
+  { id: '13', name: 'Chennai Port Hub', type: 'Distribution Center', lat: 13.0827, lng: 80.2707, status: 'Yellow', riskLevel: 'Medium', origin: 'Chennai, IN', destination: 'Hong Kong, HK', timelineStatus: 'Packed' },
+  { id: '14', name: 'Hyderabad Pharma Center', type: 'Factory', lat: 17.3850, lng: 78.4867, status: 'Green', riskLevel: 'Low', origin: 'Hyderabad, IN', destination: 'London, UK', timelineStatus: 'Dispatched' },
+  { id: '15', name: 'Kolkata Port Terminal', type: 'Distribution Center', lat: 22.5726, lng: 88.3639, status: 'Green', riskLevel: 'Low', origin: 'Kolkata, IN', destination: 'Dhaka, BD', timelineStatus: 'Dispatched' },
+  { id: '16', name: 'Ahmedabad Industrial Zone', type: 'Factory', lat: 23.0225, lng: 72.5714, status: 'Green', riskLevel: 'Low', origin: 'Ahmedabad, IN', destination: 'Mumbai, IN', timelineStatus: 'Packed' },
+  { id: '17', name: 'Pune Automotive Hub', type: 'Factory', lat: 18.5204, lng: 73.8567, status: 'Yellow', riskLevel: 'Medium', origin: 'Pune, IN', destination: 'Chennai, IN', timelineStatus: 'In Transit' },
+  { id: '18', name: 'Kochi Logistics Terminal', type: 'Distribution Center', lat: 9.9312, lng: 76.2673, status: 'Green', riskLevel: 'Low', origin: 'Kochi, IN', destination: 'Colombo, LK', timelineStatus: 'Dispatched' },
+  { id: '19', name: 'Jaipur Distribution Center', type: 'Warehouse', lat: 26.9124, lng: 75.7873, status: 'Green', riskLevel: 'Low', origin: 'Jaipur, IN', destination: 'Delhi, IN', timelineStatus: 'In Transit' },
+  { id: '20', name: 'Surat Textile Factory', type: 'Factory', lat: 21.1702, lng: 72.8311, status: 'Green', riskLevel: 'Low', origin: 'Surat, IN', destination: 'Ahmedabad, IN', timelineStatus: 'Packed' },
   { id: '7', name: 'Dubai Logistics Center', type: 'Warehouse', lat: 25.2048, lng: 55.2708, status: 'Green', riskLevel: 'Low', origin: 'Dubai, UAE', destination: 'London, UK', timelineStatus: 'In Transit' },
   { id: '8', name: 'Truck 809', type: 'Delivery Truck', lat: 48.8566, lng: 2.3522, status: 'Red', riskLevel: 'High', shipmentId: 'SHP-5512', eta: 'Delayed', origin: 'Paris, FR', destination: 'Madrid, ES', timelineStatus: 'In Transit' },
   { id: '9', name: 'Shenzhen Electronics', type: 'Factory', lat: 22.5431, lng: 114.0579, status: 'Green', riskLevel: 'Low', origin: 'Shenzhen, CN', destination: 'San Francisco, USA', timelineStatus: 'Packed' },
@@ -51,12 +61,15 @@ const initialProducts: Product[] = [
   { id: 'PRD-001', name: 'Microchips X1', category: 'Electronics', price: 12.50, stock: 12000, demandForecast: 15000, restockRecommendation: 5000, status: 'Yellow' },
   { id: 'PRD-002', name: 'Lithium Batteries', category: 'Energy', price: 45.00, stock: 450, demandForecast: 2000, restockRecommendation: 2000, status: 'Red' },
   { id: 'PRD-003', name: 'Steel Casings', category: 'Materials', price: 8.75, stock: 85000, demandForecast: 60000, restockRecommendation: 0, status: 'Green' },
+  { id: 'PRD-004', name: 'Textile Fabrics', category: 'Materials', price: 5.20, stock: 45000, demandForecast: 50000, restockRecommendation: 10000, status: 'Yellow' },
+  { id: 'PRD-005', name: 'Pharma Ingredients', category: 'Chemicals', price: 120.00, stock: 1500, demandForecast: 1200, restockRecommendation: 0, status: 'Green' },
 ];
 
 const initialSuppliers: Supplier[] = [
   { id: 'SUP-1', name: 'Alpha Tech', location: 'Shenzhen, CN', reliabilityScore: 98, successRate: 99.2, riskLevel: 'Green' },
   { id: 'SUP-2', name: 'Beta Components', location: 'Los Angeles, US', reliabilityScore: 75, successRate: 82.5, riskLevel: 'Yellow' },
   { id: 'SUP-3', name: 'Delta Logistics', location: 'London, UK', reliabilityScore: 45, successRate: 60.1, riskLevel: 'Red' },
+  { id: 'SUP-4', name: 'Bharat Logistics', location: 'Mumbai, IN', reliabilityScore: 92, successRate: 95.5, riskLevel: 'Green' },
 ];
 
 const initialAlerts: Alert[] = [
